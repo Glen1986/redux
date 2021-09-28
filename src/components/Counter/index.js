@@ -1,12 +1,13 @@
-import { useDispatch } from 'react-redux'
+import {useDispatch} from 'react-redux'
+import {addNumber, subNumber} from '../../store/modules/result/actions';
 
-const Counter =()=>{
+const Counter = () => {
   const dispatch = useDispatch();
-  return(
+  return (
     <>
-      <button onClick={()=>dispatch({type: "ADD_NUMBER", payload: 1})}>add</button>
-      <button onClick={()=>dispatch({type: "SUB_NUMBER", payload: 1})}>less</button>
+      <button onClick={() => dispatch(addNumber(1))}>add</button>
+      <button onClick={() => dispatch(subNumber(1))}>less</button>
     </>
   );
 };
- export default Counter;
+export default Counter;
